@@ -1,0 +1,678 @@
+[
+    {
+        "id": 101,
+        "img": "https:\/\/images.unsplash.com\/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=250",
+        "firstName": "Alice",
+        "lastName": "Smith",
+        "email": "alice.smith@company.com",
+        "password": "Password123!",
+        "phone": "+1-555-010-1122",
+        "hireDate": "2019-03-15",
+        "jobTitle": "Engineering Manager",
+        "department": "Engineering",
+        "salary": 145000,
+        "managerId": null,
+        "isActive": false,
+        "skills": [
+            "Java",
+            "System Architecture",
+            "Leadership",
+            "Microservices"
+        ],
+        "address": {
+            "street": "101 Tech Way",
+            "city": "San Francisco",
+            "state": "CA",
+            "zipCode": "94105"
+        }
+    },
+    {
+        "id": 102,
+        "img": "https:\/\/images.unsplash.com\/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=250",
+        "firstName": "Bob",
+        "lastName": "Miller",
+        "email": "bob.miller@company.com",
+        "password": "Password123!",
+        "phone": "+1-555-012-3344",
+        "hireDate": "2020-06-01",
+        "jobTitle": "Senior Software Engineer",
+        "department": "Engineering",
+        "salary": 130000,
+        "managerId": 101,
+        "isActive": false,
+        "skills": [
+            "Python",
+            "Django",
+            "PostgreSQL",
+            "Docker"
+        ],
+        "address": {
+            "street": "204 Code Ave",
+            "city": "San Jose",
+            "state": "CA",
+            "zipCode": "95110"
+        }
+    },
+    {
+        "id": 103,
+        "img": "https:\/\/images.unsplash.com\/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=250",
+        "firstName": "Robert",
+        "lastName": "Johnson",
+        "email": "robert.j@company.com",
+        "password": "Password123!",
+        "phone": "+1-555-017-5544",
+        "hireDate": "2021-11-10",
+        "jobTitle": "Product Manager",
+        "department": "Product",
+        "salary": 125000,
+        "managerId": 101,
+        "isActive": false,
+        "skills": [
+            "Agile",
+            "Scrum",
+            "Product Roadmap",
+            "Jira"
+        ],
+        "address": {
+            "street": "789 Strategy Lane",
+            "city": "New York",
+            "state": "NY",
+            "zipCode": "10001"
+        }
+    },
+    {
+        "id": 104,
+        "img": "https:\/\/images.unsplash.com\/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=250",
+        "firstName": "Emma",
+        "lastName": "Davis",
+        "email": "emma.davis@company.com",
+        "password": "Password123!",
+        "phone": "+1-555-018-9900",
+        "hireDate": "2021-01-15",
+        "jobTitle": "UX Designer",
+        "department": "Design",
+        "salary": 98000,
+        "managerId": 103,
+        "isActive": true,
+        "skills": [
+            "Figma",
+            "User Research",
+            "Wireframing",
+            "Prototyping"
+        ],
+        "address": {
+            "street": "456 Creative Blvd",
+            "city": "Brooklyn",
+            "state": "NY",
+            "zipCode": "11201"
+        }
+    },
+    {
+        "id": 105,
+        "img": "https:\/\/images.unsplash.com\/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=250",
+        "firstName": "Michael",
+        "lastName": "Brown",
+        "email": "michael.brown@company.com",
+        "password": "Password123!",
+        "phone": "+1-555-019-2233",
+        "hireDate": "2018-08-20",
+        "jobTitle": "DevOps Lead",
+        "department": "Engineering",
+        "salary": 140000,
+        "managerId": 101,
+        "isActive": true,
+        "skills": [
+            "AWS",
+            "Kubernetes",
+            "Terraform",
+            "CI\/CD"
+        ],
+        "address": {
+            "street": "12 Cloud St",
+            "city": "Seattle",
+            "state": "WA",
+            "zipCode": "98101"
+        }
+    },
+    {
+        "id": 106,
+        "img": "https:\/\/images.unsplash.com\/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=250",
+        "firstName": "Sarah",
+        "lastName": "Wilson",
+        "email": "sarah.wilson@company.com",
+        "password": "Password123!",
+        "phone": "+1-555-020-4455",
+        "hireDate": "2022-02-01",
+        "jobTitle": "Data Scientist",
+        "department": "Data",
+        "salary": 118000,
+        "managerId": 101,
+        "isActive": true,
+        "skills": [
+            "Python",
+            "Machine Learning",
+            "SQL",
+            "Pandas"
+        ],
+        "address": {
+            "street": "88 Data Park",
+            "city": "Austin",
+            "state": "TX",
+            "zipCode": "78701"
+        }
+    },
+    {
+        "id": 107,
+        "img": "https:\/\/images.unsplash.com\/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=250",
+        "firstName": "David",
+        "lastName": "Taylor",
+        "email": "david.taylor@company.com",
+        "password": "Password123!",
+        "phone": "+1-555-021-6677",
+        "hireDate": "2019-11-12",
+        "jobTitle": "Frontend Developer",
+        "department": "Engineering",
+        "salary": 105000,
+        "managerId": 102,
+        "isActive": true,
+        "skills": [
+            "React",
+            "TypeScript",
+            "HTML5",
+            "CSS3",
+            "Tailwind"
+        ],
+        "address": {
+            "street": "303 Web Rd",
+            "city": "San Jose",
+            "state": "CA",
+            "zipCode": "95112"
+        }
+    },
+    {
+        "id": 108,
+        "img": "https:\/\/images.unsplash.com\/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=250",
+        "firstName": "Jessica",
+        "lastName": "Anderson",
+        "email": "jessica.a@company.com",
+        "password": "Password123!",
+        "phone": "+1-555-022-8899",
+        "hireDate": "2020-04-10",
+        "jobTitle": "HR Director",
+        "department": "Human Resources",
+        "salary": 135000,
+        "managerId": null,
+        "isActive": true,
+        "skills": [
+            "Employee Relations",
+            "Talent Acquisition",
+            "HR Policy",
+            "Performance Management"
+        ],
+        "address": {
+            "street": "500 People Plaza",
+            "city": "Chicago",
+            "state": "IL",
+            "zipCode": "60601"
+        }
+    },
+    {
+        "id": 109,
+        "img": "https:\/\/images.unsplash.com\/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=250",
+        "firstName": "James",
+        "lastName": "Thomas",
+        "email": "james.thomas@company.com",
+        "password": "Password123!",
+        "phone": "+1-555-023-1100",
+        "hireDate": "2021-07-19",
+        "jobTitle": "HR Specialist",
+        "department": "Human Resources",
+        "salary": 72000,
+        "managerId": 108,
+        "isActive": true,
+        "skills": [
+            "Onboarding",
+            "Recruiting",
+            "HRIS",
+            "Benefits"
+        ],
+        "address": {
+            "street": "502 People Plaza",
+            "city": "Chicago",
+            "state": "IL",
+            "zipCode": "60601"
+        }
+    },
+    {
+        "id": 110,
+        "img": "https:\/\/images.unsplash.com\/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=250",
+        "firstName": "Laura",
+        "lastName": "Jackson",
+        "email": "laura.jackson@company.com",
+        "password": "Password123!",
+        "phone": "+1-555-024-3322",
+        "hireDate": "2017-09-01",
+        "jobTitle": "Financial Analyst",
+        "department": "Finance",
+        "salary": 95000,
+        "managerId": null,
+        "isActive": true,
+        "skills": [
+            "Financial Modeling",
+            "Excel",
+            "Budgeting",
+            "Forecasting"
+        ],
+        "address": {
+            "street": "100 Wall St",
+            "city": "New York",
+            "state": "NY",
+            "zipCode": "10005"
+        }
+    },
+    {
+        "id": 111,
+        "img": "https:\/\/images.unsplash.com\/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&q=80&w=250",
+        "firstName": "Daniel",
+        "lastName": "White",
+        "email": "daniel.white@company.com",
+        "password": "Password123!",
+        "phone": "+1-555-025-5544",
+        "hireDate": "2022-05-16",
+        "jobTitle": "QA Engineer",
+        "department": "Engineering",
+        "salary": 88000,
+        "managerId": 102,
+        "isActive": true,
+        "skills": [
+            "Selenium",
+            "Cypress",
+            "Automated Testing",
+            "Bug Tracking"
+        ],
+        "address": {
+            "street": "77 Testing Ave",
+            "city": "San Francisco",
+            "state": "CA",
+            "zipCode": "94107"
+        }
+    },
+    {
+        "id": 112,
+        "img": "https:\/\/images.unsplash.com\/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=250",
+        "firstName": "Sophia",
+        "lastName": "Harris",
+        "email": "sophia.harris@company.com",
+        "password": "Password123!",
+        "phone": "+1-555-026-7766",
+        "hireDate": "2020-09-30",
+        "jobTitle": "Marketing Manager",
+        "department": "Marketing",
+        "salary": 110000,
+        "managerId": null,
+        "isActive": true,
+        "skills": [
+            "SEO",
+            "Content Strategy",
+            "Google Analytics",
+            "Campaign Management"
+        ],
+        "address": {
+            "street": "88 Brand Way",
+            "city": "Los Angeles",
+            "state": "CA",
+            "zipCode": "90001"
+        }
+    },
+    {
+        "id": 113,
+        "img": "https:\/\/images.unsplash.com\/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=250",
+        "firstName": "Matthew",
+        "lastName": "Martin",
+        "email": "matthew.m@company.com",
+        "password": "Password123!",
+        "phone": "+1-555-027-9988",
+        "hireDate": "2021-03-01",
+        "jobTitle": "Content Writer",
+        "department": "Marketing",
+        "salary": 68000,
+        "managerId": 112,
+        "isActive": true,
+        "skills": [
+            "Copywriting",
+            "Blogging",
+            "SEO Writing",
+            "Social Media"
+        ],
+        "address": {
+            "street": "90 Media Blvd",
+            "city": "Los Angeles",
+            "state": "CA",
+            "zipCode": "90002"
+        }
+    },
+    {
+        "id": 114,
+        "img": "https:\/\/images.unsplash.com\/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=250",
+        "firstName": "Olivia",
+        "lastName": "Thompson",
+        "email": "olivia.t@company.com",
+        "password": "Password123!",
+        "phone": "+1-555-028-1122",
+        "hireDate": "2023-01-10",
+        "jobTitle": "Backend Developer",
+        "department": "Engineering",
+        "salary": 112000,
+        "managerId": 102,
+        "isActive": true,
+        "skills": [
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "REST APIs"
+        ],
+        "address": {
+            "street": "15 Server St",
+            "city": "San Jose",
+            "state": "CA",
+            "zipCode": "95113"
+        }
+    },
+    {
+        "id": 115,
+        "img": "https:\/\/images.unsplash.com\/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&q=80&w=250",
+        "firstName": "Andrew",
+        "lastName": "Garcia",
+        "email": "andrew.garcia@company.com",
+        "password": "Password123!",
+        "phone": "+1-555-029-3344",
+        "hireDate": "2019-05-22",
+        "jobTitle": "Account Executive",
+        "department": "Sales",
+        "salary": 102000,
+        "managerId": null,
+        "isActive": true,
+        "skills": [
+            "B2B Sales",
+            "Salesforce",
+            "Negotiation",
+            "CRM"
+        ],
+        "address": {
+            "street": "404 Deal Drive",
+            "city": "Dallas",
+            "state": "TX",
+            "zipCode": "75201"
+        }
+    },
+    {
+        "id": 116,
+        "img": "https:\/\/images.unsplash.com\/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&q=80&w=250",
+        "firstName": "Emily",
+        "lastName": "Martinez",
+        "email": "emily.martinez@company.com",
+        "password": "Password123!",
+        "phone": "+1-555-030-5566",
+        "hireDate": "2022-08-15",
+        "jobTitle": "Sales Representative",
+        "department": "Sales",
+        "salary": 75000,
+        "managerId": 115,
+        "isActive": true,
+        "skills": [
+            "Cold Calling",
+            "Lead Generation",
+            "HubSpot",
+            "Communication"
+        ],
+        "address": {
+            "street": "408 Deal Drive",
+            "city": "Dallas",
+            "state": "TX",
+            "zipCode": "75201"
+        }
+    },
+    {
+        "id": 117,
+        "img": "https:\/\/images.unsplash.com\/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&q=80&w=250",
+        "firstName": "Joshua",
+        "lastName": "Robinson",
+        "email": "joshua.r@company.com",
+        "password": "Password123!",
+        "phone": "+1-555-031-7788",
+        "hireDate": "2018-02-14",
+        "jobTitle": "Database Administrator",
+        "department": "IT",
+        "salary": 120000,
+        "managerId": 101,
+        "isActive": true,
+        "skills": [
+            "PostgreSQL",
+            "MySQL",
+            "Database Tuning",
+            "Backup & Recovery"
+        ],
+        "address": {
+            "street": "60 Query Ave",
+            "city": "Seattle",
+            "state": "WA",
+            "zipCode": "98104"
+        }
+    },
+    {
+        "id": 118,
+        "img": "https:\/\/images.unsplash.com\/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&q=80&w=250",
+        "firstName": "Amanda",
+        "lastName": "Clark",
+        "email": "amanda.clark@company.com",
+        "password": "Password123!",
+        "phone": "+1-555-032-9900",
+        "hireDate": "2021-10-05",
+        "jobTitle": "Customer Support Lead",
+        "department": "Support",
+        "salary": 82000,
+        "managerId": null,
+        "isActive": true,
+        "skills": [
+            "Zendesk",
+            "Customer Service",
+            "Escalation Management",
+            "Team Training"
+        ],
+        "address": {
+            "street": "120 Care Lane",
+            "city": "Phoenix",
+            "state": "AZ",
+            "zipCode": "85001"
+        }
+    },
+    {
+        "id": 119,
+        "img": "https:\/\/images.unsplash.com\/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&q=80&w=250",
+        "firstName": "Christopher",
+        "lastName": "Rodriguez",
+        "email": "chris.r@company.com",
+        "password": "Password123!",
+        "phone": "+1-555-033-1122",
+        "hireDate": "2023-03-01",
+        "jobTitle": "Support Specialist",
+        "department": "Support",
+        "salary": 58000,
+        "managerId": 118,
+        "isActive": true,
+        "skills": [
+            "Ticketing Systems",
+            "Troubleshooting",
+            "Communication",
+            "Interpersonal Skills"
+        ],
+        "address": {
+            "street": "122 Care Lane",
+            "city": "Phoenix",
+            "state": "AZ",
+            "zipCode": "85001"
+        }
+    },
+    {
+        "id": 120,
+        "img": "https:\/\/images.unsplash.com\/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=250",
+        "firstName": "Ashley",
+        "lastName": "Lewis",
+        "email": "ashley.lewis@company.com",
+        "password": "Password123!",
+        "phone": "+1-555-034-3344",
+        "hireDate": "2020-12-01",
+        "jobTitle": "Scrum Master",
+        "department": "Product",
+        "salary": 115000,
+        "managerId": 103,
+        "isActive": true,
+        "skills": [
+            "Agile Coaching",
+            "Sprint Planning",
+            "Jira",
+            "Facilitation"
+        ],
+        "address": {
+            "street": "791 Strategy Lane",
+            "city": "New York",
+            "state": "NY",
+            "zipCode": "10001"
+        }
+    },
+    {
+        "id": 121,
+        "img": "https:\/\/images.unsplash.com\/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=250",
+        "firstName": "Brian",
+        "lastName": "Lee",
+        "email": "brian.lee@company.com",
+        "password": "Password123!",
+        "phone": "+1-555-035-5566",
+        "hireDate": "2022-11-14",
+        "jobTitle": "Security Engineer",
+        "department": "IT",
+        "salary": 128000,
+        "managerId": 105,
+        "isActive": true,
+        "skills": [
+            "Cybersecurity",
+            "Penetration Testing",
+            "OAuth",
+            "Network Security"
+        ],
+        "address": {
+            "street": "14 Cloud St",
+            "city": "Seattle",
+            "state": "WA",
+            "zipCode": "98101"
+        }
+    },
+    {
+        "id": 122,
+        "img": "https:\/\/images.unsplash.com\/photo-1566492031773-4f4e44671857?auto=format&fit=crop&q=80&w=250",
+        "firstName": "Megan",
+        "lastName": "Walker",
+        "email": "megan.walker@company.com",
+        "password": "Password123!",
+        "phone": "+1-555-036-7788",
+        "hireDate": "2019-07-08",
+        "jobTitle": "Data Engineer",
+        "department": "Data",
+        "salary": 122000,
+        "managerId": 106,
+        "isActive": true,
+        "skills": [
+            "ETL",
+            "Apache Spark",
+            "Airflow",
+            "Snowflake"
+        ],
+        "address": {
+            "street": "92 Data Park",
+            "city": "Austin",
+            "state": "TX",
+            "zipCode": "78701"
+        }
+    },
+    {
+        "id": 123,
+        "img": "https:\/\/images.unsplash.com\/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=250",
+        "firstName": "Kevin",
+        "lastName": "Hall",
+        "email": "kevin.hall@company.com",
+        "password": "Password123!",
+        "phone": "+1-555-037-9900",
+        "hireDate": "2021-06-25",
+        "jobTitle": "Business Analyst",
+        "department": "Product",
+        "salary": 92000,
+        "managerId": 103,
+        "isActive": true,
+        "skills": [
+            "Requirement Analysis",
+            "SQL",
+            "PowerBI",
+            "Process Mapping"
+        ],
+        "address": {
+            "street": "795 Strategy Lane",
+            "city": "New York",
+            "state": "NY",
+            "zipCode": "10001"
+        }
+    },
+    {
+        "id": 124,
+        "img": "https:\/\/images.unsplash.com\/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=250",
+        "firstName": "Rachel",
+        "lastName": "Allen",
+        "email": "rachel.allen@company.com",
+        "password": "Password123!",
+        "phone": "+1-555-038-1122",
+        "hireDate": "2023-04-01",
+        "jobTitle": "Cloud Architect",
+        "department": "Engineering",
+        "salary": 150000,
+        "managerId": 101,
+        "isActive": true,
+        "skills": [
+            "AWS Architecture",
+            "Azure",
+            "Serverless",
+            "Cost Optimization"
+        ],
+        "address": {
+            "street": "105 Tech Way",
+            "city": "San Francisco",
+            "state": "CA",
+            "zipCode": "94105"
+        }
+    },
+    {
+        "id": 125,
+        "img": "https:\/\/images.unsplash.com\/photo-1521119989659-a83eee488004?auto=format&fit=crop&q=80&w=250",
+        "firstName": "Justin",
+        "lastName": "Young",
+        "email": "justin.young@company.com",
+        "password": "Password123!",
+        "phone": "+1-555-039-3344",
+        "hireDate": "2020-01-20",
+        "jobTitle": "Legal Counsel",
+        "department": "Legal",
+        "salary": 142000,
+        "managerId": null,
+        "isActive": true,
+        "skills": [
+            "Corporate Law",
+            "Contract Negotiation",
+            "Compliance",
+            "IP Law"
+        ],
+        "address": {
+            "street": "100 Justice Way",
+            "city": "Washington",
+            "state": "DC",
+            "zipCode": "20001"
+        }
+    }
+]

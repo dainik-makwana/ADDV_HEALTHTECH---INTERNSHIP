@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        background-color: rgba(128, 128, 128, 0.1);
+    }
+
+    div {
+        background-color: white;
+        padding: 1rem;
+        margin: 2rem 0;
+        border: 2px solid #f2f2f2;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    div>* {
+        width: fit-content;
+    }
+</style>
+
+<body>
+    <div>
+        <h3>Button Click Event</h3>
+        <button class="click-btn">Click</button>
+    </div>
+
+    <div>
+        <h3>Input KeyPress Event</h3>
+        <input class="keypress" type="text" placeholder="Enter something" />
+        <p>Key Pressed: <span class="keypressed"></span></p>
+        <p>Input Value: <span class="keypress-text"></span></p>
+    </div>
+
+    <div>
+        <h3>Input KeyUp Event</h3>
+        <input class="keyup" type="text" placeholder="Enter something" />
+        <p>Key Pressed: <span class="keyuped"></span></p>
+        <p>Input Value: <span class="keyup-text"></span></p>
+    </div>
+
+    <div>
+        <h3>Input KeyDown Event</h3>
+        <input class="keydown" type="text" placeholder="Enter something" />
+        <p>Key Pressed: <span class="keydowned"></span></p>
+        <p>Input Value: <span class="keydown-text"></span></p>
+    </div>
+
+
+    <div class="mouse-enter">
+        <h3>MouseEnter Event</h3>
+        <p class="mouse-enter-text"></p>
+    </div>
+
+    <div class="mouse-up">
+        <h3>MouseUp Event</h3>
+        <p class="mouse-up-text"></p>
+    </div>
+
+    <div class="mouse-down">
+        <h3>MouseDown Event</h3>
+        <p class="mouse-down-text"></p>
+    </div>
+
+
+    <div>
+        <h3>Event Delegation (Bubbling)</h3>
+        <div id="bubbling-parent">
+            Parent
+            <div id="bubbling-child">
+                Child
+                <button id="bubbling-myButton">Click Me</button>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h3>Event Delegation (Capturing)</h3>
+        <div id="capturing-parent">
+            Parent
+            <div id="capturing-child">
+                Child
+                <button id="capturing-myButton">Click Me</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="parent">
+        <h3>event.target vs. event.currentTarget</h3>
+        <button id="myButton">Click Me</button>
+    </div>
+</body>
+
+<script>
+    // Click Button Event
+    let clickBtn = document.querySelector(".click-btn");
+
+    clickBtn.addEventListener("click", function () {
+        alert("Button clicked");
+    });
+
+
+    // KeyPress Event
+    let keypress = document.querySelector(".keypress");
+    let keypressed = document.querySelector(".keypressed");
+    let keypressText = document.querySelector(".keypress-text");
+
+    keypress.addEventListener("keypress", function (e) {
+        keypressed.textContent = e.key;
+        keypressText.textContent = e.target.value;
+    });
+
+
+    // KeyUp Event
+    let keyup = document.querySelector(".keyup");
+    let keyuped = document.querySelector(".keyuped");
+    let keyupText = document.querySelector(".keyup-text");
+
+    keyup.addEventListener("keyup", function (e) {
+        keyuped.textContent = e.key;
+        keyupText.textContent = e.target.value;
+    });
+
+    // KeyDown Event
+    let keydown = document.querySelector(".keydown");
+    let keydowned = document.querySelector(".keydowned");
+    let keydownText = document.querySelector(".keydown-text");
+
+    keydown.addEventListener("keydown", function (e) {
+        keydowned.textContent = e.key;
+        keydownText.textContent = e.target.value;
+    });
+
+
+    // MouseEnter Event
+    let mouseEnterEle = document.querySelector(".mouse-enter");
+    let mouseEnterText = document.querySelector(".mouse-enter-text");
+
+    mouseEnterEle.addEventListener("mouseenter", function () {
+        mouseEnterText.textContent = "Mouse Entered";
+    });
+
+    // MouseUp Event
+    let mouseUpEle = document.querySelector(".mouse-up");
+    let mouseUpText = document.querySelector(".mouse-up-text");
+
+    mouseUpEle.addEventListener("mouseup", function () {
+        mouseUpText.textContent = "Mouse released the click";
+    });
+
+    // MouseDown Event
+    let mouseDownEle = document.querySelector(".mouse-down");
+    let mouseDownText = document.querySelector(".mouse-down-text");
+
+    mouseDownEle.addEventListener("mousedown", function () {
+        mouseDownText.textContent = "Mouse clicked here...";
+    });
+
+
+
+
+    // Event delegation (Event bubling)
+    document.getElementById("bubbling-parent").addEventListener("click", () => {
+        alert("Bubbling Parent called");
+        document.getElementById("bubbling-parent").style.transition = "all 5s linear";
+        document.getElementById("bubbling-parent").style.backgroundColor = "lightblue";
+    });
+
+    document.getElementById("bubbling-child").addEventListener("click", () => {
+        alert("Bubbling Child called");
+        document.getElementById("bubbling-child").style.transition = "all 5s linear";
+        document.getElementById("bubbling-child").style.backgroundColor = "lightgreen";
+    });
+
+    document.getElementById("bubbling-myButton").addEventListener("click", () => {
+        alert("Bubbling Button called");
+        document.getElementById("bubbling-myButton").style.transition = "all 5s linear";
+        document.getElementById("bubbling-myButton").style.backgroundColor = "pink";
+    });
+
+
+
+    // Event delegation (Event capturing)
+    document.getElementById("capturing-parent").addEventListener("click", () => {
+        alert("Capturing Parent called");
+        document.getElementById("capturing-parent").style.transition = "all 5s linear";
+        document.getElementById("capturing-parent").style.backgroundColor = "lightblue";
+    }, true);
+
+    document.getElementById("capturing-child").addEventListener("click", () => {
+        alert("Capturing Child called");
+        document.getElementById("capturing-child").style.transition = "all 5s linear";
+        document.getElementById("capturing-child").style.backgroundColor = "lightgreen";
+    }, true);
+
+    document.getElementById("capturing-myButton").addEventListener("click", () => {
+        alert("Capturing Button called");
+        document.getElementById("capturing-myButton").style.transition = "all 5s linear";
+        document.getElementById("capturing-myButton").style.backgroundColor = "pink";
+    }, true);
+
+
+    // event.target vs. event.currentTarget
+    const parent = document.getElementById("parent");
+
+    parent.addEventListener("click", function (event) {
+        console.log("Target:", event.target);
+        console.log("Current target:", event.currentTarget);
+    });
+</script>
+
+</html>

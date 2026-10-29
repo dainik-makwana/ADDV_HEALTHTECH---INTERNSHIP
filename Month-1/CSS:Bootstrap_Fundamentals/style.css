@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+    font-family: "Lato", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+li {
+    list-style: none;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+section:nth-of-type(odd) {
+    background-color: #f8f8f8;
+}
+
+.section-heading {
+    width: fit-content !important;
+    display: inline !important;
+    position: relative;
+    border-bottom: 1px solid grey;
+}
+
+.section-heading::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6%;
+    transform: translate(-50%, 0);
+    width: 50%;
+    height: 4px;
+    background-color: green;
+}
+
+img {
+    height: 100% !important;
+}
+
+header {
+    color: #ffffff;
+    background-color: #1b1933;
+}
+
+.hero-header {
+    font-size: 55px;
+    font-weight: 900;
+}
+
+
+.about-section img {
+    object-fit: cover;
+    height: 400px !important;
+}
+
+
+.services-section .service i {
+    font-size: 25px;
+    width: 60px;
+    height: 60px;
+    padding: 2rem;
+    display: grid;
+    place-content: center;
+}
+
+.services-section .service {
+    transition: all 0.15s linear;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+}
+
+.services-section .service::before {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 4px;
+    content: "";
+    background-color: green;
+}
+
+.services-section .service:hover::before {
+    transition: all 0.5s linear;
+    width: 100%;
+}
+
+.services-section .service:hover {
+    scale: 1.05;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.services-section .service:hover i {
+    transition: all 0.3s linear;
+    color: white !important;
+    background-color: #059669 !important;
+}
+
+.services-section .service:hover button {
+    color: #059669;
+}
+
+.services-section .service-1 {
+    position: relative;
+    background: linear-gradient(160deg, #ffffff 0%, color-mix(in srgb, #379c0c, #ffffff 95%) 100%);
+}
+
+.services-section .badge {
+    font-size: 13px;
+    position: absolute;
+    top: 2.5%;
+    right: 2.5%;
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+
+.why-us-section i {
+    font-size: 35px;
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-content: center;
+}
+
+.why-us-section .component {
+    border-left: 3px solid green;
+}
+
+
+.contact-section .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, color-mix(in srgb, #379c0c, transparent 95%), transparent);
+}
+
+.contact-section .card i {
+    font-size: 28px;
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-content: center;
+    color: #10b981;
+}
+
+.contact-section .right-side {
+    background: linear-gradient(160deg, #379c0c, color-mix(in srgb, #379c0c, #7c3aed 40%));
+}

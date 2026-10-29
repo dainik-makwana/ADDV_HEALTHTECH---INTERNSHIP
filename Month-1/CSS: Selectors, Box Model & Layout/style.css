@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    padding: 2rem 4rem;
+    background-color: white;
+    box-shadow: 0px 0px 5px 1px rgb(221, 219, 219);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+#menus {
+    display: flex;
+    justify-content: space-between;
+}
+
+#menus li {
+    padding: 0 1rem;
+    list-style: none;
+}
+
+#login-btns button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.65rem;
+    border: 1px solid grey;
+    background-color: transparent;
+}
+
+.section {
+    padding: 4rem;
+    background-color: rgba(117, 201, 117, .3);
+}
+
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+}
+
+.hero-section h1 {
+    font-size: 50px;
+}
+
+.hero-section p {
+    font-size: 20px;
+    margin-top: 1rem;
+}
+
+.hero-section img {
+    border-radius: 1rem;
+}
+
+
+.projects-section .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.projects-grid .card {
+    height: max-content;
+    background-color: white;
+    border: 2px solid #f2f2f2;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px 2px #f2f2f2;
+    overflow: hidden;
+}
+
+.projects-grid .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.projects-grid .card .card-body {
+    padding: 1.5rem 1rem;
+}
+
+.projects-grid .card .title {
+    margin-bottom: 0.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.projects-grid .card .description {
+    color: rgba(128, 128, 128, 0.8);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+.skills-section .skills-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skills-flex .skill {
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid grey;
+    border-radius: 0.65rem;
+    background-color: #f2f2f2;
+}
+
+.skills-flex .skill img {
+    width: 90px;
+    padding: 1rem;
+}
+
+
+.chat-bot {
+    position: fixed;
+    right: 2%;
+    bottom: 5%;
+    box-shadow: 0px 0px 10px 2px #f2f2f2;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: black;
+    border: 1px solid black;
+}
+
+.chat-bot .heading {
+    position: relative;
+    color: white;
+    padding: 1rem 3rem;
+}
+
+.chat-bot .heading .fa-circle-xmark {
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    right: 6%;
+    transform: translate(0, -50%);
+}
+
+.chat-bot .body {
+    position: relative;
+    min-height: 300px;
+    padding: 1rem 0;
+    background-color: white;
+}
+
+.chat-bot .logo {
+    padding: 0 3rem;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.chat-bot .first-chat {
+    position: absolute;
+    bottom: 3%;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    background-color: #f2f2f2;
+    border-radius: 0 1.65rem 0 1.65rem;
+}
+
+.chat-bot .body p {
+    padding: 0 3rem;
+    color: grey;
+    text-align: center;
+}
+
+.chat-bot .input {
+    display: flex;
+}
+
+.chat-bot .input input {
+    width: 80%;
+    padding: 0.7rem;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background-color: #f2f2f2;
+}
+
+.chat-bot .input i {
+    display: grid;
+    place-content: center;
+    color: white;
+    width: 20%;
+    font-size: 25px;
+}
+
+
+
+footer {
+    margin: 4rem;
+    padding: 2rem;
+    border: 2px solid #f2f2f2;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+footer .footer1 {
+    display: flex;
+    padding: 1rem 0;
+}
+footer .footer1>div {
+    width: 100%;
+}
+footer .footer1 .right {
+    display: flex;
+    justify-content: flex-end;
+}
+footer .footer1 .right>div {
+    padding: 0 2rem;
+}
+footer .footer1 .right h4 {
+    padding-bottom: 1rem;
+}
+footer .footer1 .right a {
+    display: block;
+    font-size: 15px;
+    color: black;
+    line-height: 1.5;
+    text-decoration: none;
+}
+footer .logo {
+    padding-bottom: 1rem;
+}
+footer .description {
+    padding-bottom: 1.5rem;
+}
+
+
+footer .footer2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0 1rem 0;
+    border-top: 2px solid #f2f2f2;
+}
+footer .footer2 a {
+    color: gray;
+    padding: 0 0.4rem;
+    font-size: 15px;
+    color: black;
+}

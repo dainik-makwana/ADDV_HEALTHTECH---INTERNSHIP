@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdn.datatables.net/2.3.4/css/dataTables.dataTables.min.css">
+
+
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <h1>jQuery Selectors, Events & AJAX</h1>
+
+
+    <!-- Selectors -->
+    <section class="container mt-10">
+        <h4 class="text-center mb-10">Selectors ID, Class, TagName and Events</h4>
+
+        <div class="row">
+            <div class="col-12 md:col-6 p-3">
+                <div class="box">
+                    <span class="fs-xl fw-bold text-gray position-absolute top-0 end-0 pe-4">01</span>
+                    <h5 class="text-center mb-5">Single click event</h5>
+                    <button class="click btn-outline theme-danger">Click</button>
+                </div>
+            </div>
+
+            <div class="col-12 md:col-6 p-3">
+                <div class="box">
+                    <span class="fs-xl fw-bold text-gray position-absolute top-0 end-0 pe-4">02</span>
+                    <h5>Double click event</h5>
+                    <button class="dbl-click btn-outline theme-danger">Double Click</button>
+                </div>
+            </div>
+
+            <div class="col-12 md:col-6 p-3">
+                <div class="box">
+                    <span class="fs-xl fw-bold text-gray position-absolute top-0 end-0 pe-4">03</span>
+                    <h5>Input event</h5>
+                    <input type="text" class="input form-control" name="input_event" placeholder="input event" />
+                    <p class="input-text"></p>
+                </div>
+            </div>
+
+            <div class="col-12 md:col-6 p-3">
+                <div class="box">
+                    <span class="fs-xl fw-bold text-gray position-absolute top-0 end-0 pe-4">04</span>
+                    <h5>Change event</h5>
+                    <input type="text" class="change form-control" name="change_event" placeholder="change event" />
+                    <p class="change-text"></p>
+                </div>
+            </div>
+
+            <div class="col-12 md:col-6 p-3">
+                <div class="box">
+                    <span class="fs-xl fw-bold text-gray position-absolute top-0 end-0 pe-4">05</span>
+                    <h5>Keydown event</h5>
+                    <input type="text" class="key-down form-control" name="key-down-event"
+                        placeholder="Keydown event" />
+                    <p class="key-down-text"></p>
+                </div>
+            </div>
+
+            <div class="col-12 md:col-6 p-3">
+                <div class="box">
+                    <span class="fs-xl fw-bold text-gray position-absolute top-0 end-0 pe-4">06</span>
+                    <h5>Keyup event</h5>
+                    <input type="text" class="key-up form-control" name="key-up-event" placeholder="Keyup event" />
+                    <p class="key-up-text"></p>
+                </div>
+            </div>
+
+            <div class="col-12 md:col-6 p-3">
+                <div class="box">
+                    <span class="fs-xl fw-bold text-gray position-absolute top-0 end-0 pe-4">07</span>
+                    <h5>Form submit event</h5>
+                    <form action="" class="form-submit-event">
+                        <input type="text" class="form-control mb-3" name="submit_input"
+                            placeholder="Enter something here..." />
+                        <input type="submit" value="Submit" name="submit" class="btn btn-outline theme-danger" />
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-12 md:col-6 p-3">
+                <div class="box">
+                    <span class="fs-xl fw-bold text-gray position-absolute top-0 end-0 pe-4">08</span>
+                    <h5>Focus event</h5>
+                    <input class="focus form-control" type="text" name="focus_event" placeholder="Focus here..." />
+                </div>
+            </div>
+
+            <div class="col-12 md:col-6 p-3">
+                <div class="box">
+                    <span class="fs-xl fw-bold text-gray position-absolute top-0 end-0 pe-4">09</span>
+                    <h5>Blur event</h5>
+                    <input class="blur form-control" type="text" name="blur_event" style="background-color: red;"
+                        placeholder="Lose focus from here..." />
+                </div>
+            </div>
+
+            <div class="col-12 md:col-6 p-3 mouse-enter">
+                <div class="box">
+                    <span class="fs-xl fw-bold text-gray position-absolute top-0 end-0 pe-4">10</span>
+                    <h5>mouseenter event</h5>
+                </div>
+            </div>
+
+            <div class="col-12 md:col-6 p-3 mouse-leave">
+                <div class="box">
+                    <span class="fs-xl fw-bold text-gray position-absolute top-0 end-0 pe-4">11</span>
+                    <h5>mouseleave event</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container mt-10 mb-5">
+        <div class="row">
+            <h3 class="text-center mb-10">Attribute selectors</h3>
+            <div class="col-12 md:col-6 p-3">
+                <form action="" class="box attribute-selector">
+                    <h4 class="text-center mb-10">Form Submission</h4>
+                    <div class="input-group mb-5">
+                        <span class="input-group-text" id="basic-addon1">username</span>
+                        <input type="text" name="username" class="form-control" placeholder="Username"
+                            aria-label="Username" aria-describedby="basic-addon1" required>
+                    </div>
+
+                    <div class="input-group mb-5">
+                        <span class="input-group-text" id="basic-addon2">email</span>
+                        <input type="email" name="email" class="form-control" placeholder="Email ID"
+                            aria-label="Email ID" aria-describedby="basic-addon2" required>
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-text" id="basic-addon2">Password</span>
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Password"
+                            aria-label="Password" aria-describedby="basic-addon2" required
+                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{10,}$">
+                    </div>
+                    <div class="strength mb-5" data-bs-strength>
+                        <div class="strength-segment"></div>
+                        <div class="strength-segment"></div>
+                        <div class="strength-segment"></div>
+                        <div class="strength-segment"></div>
+                    </div>
+                    <span class="strength-text"></span>
+
+                    <div class="input-group mb-5">
+                        <span class="input-group-text" id="basic-addon2">phone</span>
+                        <input type="phone" name="phone" class="form-control" placeholder="Phone Number"
+                            aria-label="Phone Number" aria-describedby="basic-addon2" required minlength="10"
+                            maxlength="10">
+                    </div>
+
+                    <div class="input-group mb-5">
+                        <span class="input-group-text" id="basic-addon2">gender</span>
+
+                        <div class="row align-items-center">
+                            <div class="col-6 form-field">
+                                <input class="radio" name="gender" value="male" type="radio" id="radioLabel" checked />
+                                <label for="radioLabel">male</label>
+                            </div>
+                            <div class="col-6 form-field">
+                                <input class="radio" name="gender" value="female" type="radio" id="radioLabel2" />
+                                <label for="radioLabel2">female</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="submit" name="submit" class="form-control btn-outline theme-danger mt-5"
+                        value="Submit" />
+                </form>
+            </div>
+
+
+            <div class="col-12 md:col-6 p-3">
+                <div class="box">
+                    <h4 class="text-center mb-10">Submitted Form Data</h4>
+
+                    <div class="container text-center">
+                        <div class="row">
+                            <div class="col border rounded-4 p-3 fw-bold fg-danger">
+                                Attribute
+                            </div>
+                            <div class="col border rounded-4 p-3 fw-bold fg-danger">
+                                Value
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col border rounded-4 p-3">Username</div>
+                            <div class="col border rounded-4 p-3 username"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col border rounded-4 p-3">Email</div>
+                            <div class="col border rounded-4 p-3 email"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col border rounded-4 p-3">Password</div>
+                            <div class="col border rounded-4 p-3 password"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col border rounded-4 p-3">Phone</div>
+                            <div class="col border rounded-4 p-3 phone"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col border rounded-4 p-3">Gender</div>
+                            <div class="col border rounded-4 p-3 gender"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Filtering and Traversing elements -->
+    <section class="container mt-10 mb-5">
+        <h3 class="text-center mb-10">Filtering and traversing elements</h3>
+        <div class="box my-5">
+            <span class="fs-xl fw-bold text-gray position-absolute top-0 end-0 pe-4">01</span>
+
+            <div class="row">
+                <div class="col-12 md:col-6 p-3">
+                    <div class="box filter-div">
+                        <h5>Element - 1 (first())</h5>
+                    </div>
+                </div>
+                <div class="col-12 md:col-6 p-3">
+                    <div class="box filter-div">
+                        <h5>Element - 2</h5>
+                    </div>
+                </div>
+                <div class="col-12 md:col-6 p-3">
+                    <div class="box filter-div">
+                        <h5>Element - 3 (eq(2))</h5>
+                    </div>
+                </div>
+                <div class="col-12 md:col-6 p-3">
+                    <div class="box filter-div">
+                        <h5>Element - 3 (eq(3))</h5>
+                    </div>
+                </div>
+                <div class="col-12 md:col-6 p-3">
+                    <div class="box filter-div active">
+                        <h5>Element - (filter(".active"))</h5>
+                    </div>
+                </div>
+                <div class="col-12 md:col-6 p-3">
+                    <div class="box filter-div deleted">
+                        <h5>Element - not(".deleted")</h5>
+                    </div>
+                </div>
+                <div class="col-12 md:col-6 p-3">
+                    <div class="box filter-div">
+                        <h5>Element - (last())</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row gap-3 mt-10">
+                <div class="col md:col-1"><button class="first-btn btn-solid theme-inverse">first()</button></div>
+                <div class="col md:col-1"><button class="eq-2-btn btn-solid theme-inverse">eq(2)</button></div>
+                <div class="col md:col-1"><button class="eq-3-btn btn-solid theme-inverse">eq(3)</button></div>
+                <div class="col md:col-2"><button class="filter-btn btn-solid theme-inverse">filter("active")</button>
+                </div>
+                <div class="col md:col-2"><button class="not-btn btn-solid theme-inverse">not(".deleted")</button></div>
+                <div class="col md:col-1"><button class="last-btn btn-solid theme-inverse">last()</button></div>
+            </div>
+        </div>
+        <hr />
+
+        <div class="box my-5">
+            <span class="fs-xl fw-bold text-gray position-absolute top-0 end-0 pe-4">02</span>
+
+            <div class="box grand-parent-node" style="background-color: gainsboro;">
+                <h4>Grand Parent</h4>
+                <div class="box parent-node" style="background-color: thistle;">
+                    <h4>Parent</h4>
+                    <div class="box child-node" style="background-color: palegreen;">
+                        Closest Child
+                        <div class="box child-1 my-3" style="background-color: lightcoral;">
+                            <h5>Children - 1</h5>
+                        </div>
+                        <div class="box child-2 my-3" style="background-color: lightcoral;">
+                            <h5>Children - 2</h5>
+                        </div>
+                        <div class="box child-3 my-3" style="background-color: lightcoral;">
+                            <h5>Children - 3</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row gap-3 mt-10">
+                <div class="col md:col-3"><button class="parent-btn btn-solid theme-inverse">parent("Closest
+                        child")</button></div>
+                <div class="col md:col-4"><button
+                        class="closest-btn btn-solid theme-inverse">("child-node")closest("grand-parent-node")</button>
+                </div>
+                <div class="col md:col-3"><button
+                        class="siblings-btn btn-solid theme-inverse">siblings("children-1")</button></div>
+                <div class="col md:col-3"><button class="next-btn btn-solid theme-inverse">next("children-2")</button>
+                </div>
+                <div class="col md:col-3"><button class="prev-btn btn-solid theme-inverse">prev("children-3")</button>
+                </div>
+                <div class="col md:col-3"><button class="find-btn btn-solid theme-inverse">find("children-1")</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Ajax -->
+    <section class="container mt-10 mb-5">
+        <h3 class="text-center mb-10">$.ajax() in jQuery</h3>
+
+        <div class="table-responsive">
+            <table class="ajax-data-grid table w-100">
+            </table>
+        </div>
+
+        <div class="w-100 d-flex justify-content-center align-items-center">
+            <div class="spinner-border my-5" style="width: 3rem; height: 3rem;" role="status">
+                <span class="visually-hidden">Loading…</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- GET, POST, PATCH, DELETE methods -->
+    <section class="ajax-posts container mt-10 mb-5">
+        <h3 class="text-center mb-10">$.ajax() GET, POST, PATCH, DELETE methods</h3>
+
+        <div class="table-responsive">
+            <button class="btn-solid theme-success add-post" data-bs-toggle="dialog" data-bs-target="#updateDetails">Add
+                Post</button>
+            <table class="ajax-posts-grid table w-100"></table>
+        </div>
+
+        <div class="w-100 d-flex justify-content-center align-items-center">
+            <div class="spinner-border my-5" style="width: 3rem; height: 3rem;" role="status">
+                <span class="visually-hidden">Loading…</span>
+            </div>
+        </div>
+
+
+
+        <dialog class="dialog" id="updateDetails">
+            <div class="dialog-header">
+                <h1 class="dialog-title">Update Details</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
+            </div>
+            <div class="dialog-body">
+                <label for="userId" class="form-label mb-2">User ID</label>
+                <input type="number" class="form-control update-userid" id="userId" placeholder="User ID" />
+
+                <label for="title" class="form-label mt-5 mb-2">Title</label>
+                <input type="text" class="form-control update-title" id="title" placeholder="Post Title" />
+
+                <label for="body" class="form-label mt-5 mb-2">Body</label>
+                <textarea class="form-control update-body" name="body" id="body" placeholder="Post Body..."></textarea>
+            </div>
+            <div class="dialog-footer">
+                <button type="button" class="btn-solid theme-secondary hide-dialog"
+                    data-bs-dismiss="dialog">Close</button>
+                <button type="button" class="btn-solid theme-primary update-post-details add-post-details">
+                    <div class="w-100 d-flex justify-content-center align-items-center">
+                        <div class="spinner-border" role="status">
+                            <span class="visually-hidden">Loading…</span>
+                        </div>
+                    </div> Save changes
+                </button>
+            </div>
+        </dialog>
+    </section>
+
+
+
+
+
+    <!-- Serialization -->
+    <section class="container mt-10 mb-5">
+        <h3 class="text-center mb-10">Serialization</h3>
+
+        <div class="box">
+            <form id="serializationForm">
+                <label for="username" class="form-label mb-2">Username</label>
+                <input type="text" name="username" class="form-control" id="username" placeholder="Username"
+                    value="ABCD EFGH" />
+
+                <label for="email" class="form-label mt-5 mb-2">Email ID</label>
+                <input type="email" name="email" class="form-control" id="email" placeholder="example123@gmail.com"
+                    value="example123@gmail.com" />
+
+                <label for="role" class="form-label mt-5 mb-2">Role</label>
+                <select name="role" class="form-control">
+                    <option value="admin">Admin</option>
+                    <option value="customer" selected>Customer</option>
+                </select>
+
+                <label class="form-label mt-5 mb-2 d-block">Skills</label>
+                <input type="checkbox" name="skills[]" value="PHP" checked> PHP&ensp;
+                <input type="checkbox" name="skills[]" value="JavaScript" checked> JavaScript&ensp;
+                <input type="checkbox" name="skills[]" value="Laravel"> Laravel&ensp;<br/>
+
+                <button type="submit" class="mt-10 btn-solid theme-danger">Submit</button>
+            </form>
+        </div>
+
+        <div class="box mt-10">
+            <h5 class="fg-danger">serialize() method: </h5>
+            <p class="fg-inverse fs-sm serialize-form-data"></p>
+
+            <h5 class="fg-danger mt-10">serializeArray() method:</h5>
+            <p class="fg-inverse fs-sm serializeArray-form-data"></p>
+        </div>
+    </section>
+
+</body>
+
+
+<script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
+    crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.datatables.net/2.3.4/js/dataTables.min.js"></script>
+
+<script src="ajax.js"></script>
+<script src="script.js"></script>
+
+
+</html>

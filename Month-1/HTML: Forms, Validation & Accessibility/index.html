@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML: Forms, Validation & Accessibility</title>
+    <meta name="description"
+        content="Labels, input types, validation attributes, ARIA basics and keyboard accessibility.">
+</head>
+
+<body>
+    <form action="">
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your name" required
+                pattern="[a-zA-Z ]+" />
+        </div>
+
+        <div>
+            <label for="email">Email Address</label>
+            <input type="email" name="email" id="email" placeholder="Enter you email" required
+                pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/" />
+        </div>
+        <div>
+            <label for="phone">Phone</label>
+            <input type="text" name="phone" id="phone" placeholder="Enter your phone no." required minlength="10" maxlength="10" />
+        </div>
+
+        <div>
+            <label for="age">Age</label>
+            <input type="number" name="age" id="phone" placeholder="Enter your Age" required min="1" max="100" />
+        </div>
+
+        <div>
+            <fieldset>
+                <legend>Gender</legend>
+                <input type="radio" name="gender" id="gender" value="Male" checked /> Male
+                <input type="radio" name="gender" id="gender" value="Female" /> Female
+            </fieldset>
+        </div>
+
+        <div>
+            <label for="cit">City</label>
+            <select name="city" id="city">
+                <option value="Ahmedabad" selected>Ahmedabad</option>
+                <option value="Surat">Surat</option>
+                <option value="Vadodara">Vadodara</option>
+            </select>
+        </div>
+
+        <div>
+            <fieldset>
+                <legend>Subjects</legend>
+                <input type="checkbox" name="subject" id="subject" value="Maths" /> Maths
+                <input type="checkbox" name="subject" id="subject" value="Science" /> Science
+                <input type="checkbox" name="subject" id="subject" value="English" /> English
+                <input type="checkbox" name="subject" id="subject" value="Gujarati" /> Gujarati
+                <input type="checkbox" name="subject" id="subject" value="Hindi" /> Hindi
+            </fieldset>
+        </div>
+
+        <input type="submit" value="Submit" />
+    </form>
+</body>
+
+</html>

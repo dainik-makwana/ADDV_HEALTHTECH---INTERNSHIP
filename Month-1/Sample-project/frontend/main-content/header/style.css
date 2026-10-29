@@ -1,0 +1,74 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px 2px #e6e6e6;
+}
+
+header .fa-bars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.7rem;
+    margin-right: 0.7rem;
+}
+
+header .fa-bars:hover {
+    background-color: #f2f2f2;
+}
+
+header>div {
+    display: flex;
+    align-items: center;
+}
+
+header .search-bar {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border: 2px solid #f2f2f2;
+}
+
+header .search-bar input {
+    border: none;
+    outline: 0;
+}
+
+header .right-menus {
+    justify-content: flex-end;
+}
+
+header .right-menus i {
+    display: grid;
+    place-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #f2f2f2;
+    margin: 0 1rem;
+}
+
+header .right-menus .user {
+    display: flex;
+    align-items: center;
+}
+
+header .right-menus .user img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+    outline-offset: 0.2rem;
+    outline: 1px solid #229122;
+}
+
+@media all and (max-width: 768px) {
+    header .right-menus {
+        width: 100%;
+    }
+}

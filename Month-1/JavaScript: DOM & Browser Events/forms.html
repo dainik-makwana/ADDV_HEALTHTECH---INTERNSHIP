@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(128, 128, 128, 0.1);
+    }
+
+    form,
+    .user-details {
+        padding: 1rem 3rem;
+        background-color: white;
+        box-shadow: 0px 0px 10px 2px #f2f2f2;
+        border-radius: 1rem;
+        min-width: 500px;
+    }
+
+    fieldset {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin: 1rem 0;
+    }
+
+    input {
+        border: 1px solid #f2f2f2;
+        padding: 0.5rem 1rem;
+        border-radius: 0.3rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 90%;
+    }
+
+    p {
+        color: red;
+        line-height: 2;
+        margin: 0;
+        font-size: 13px;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    th,
+    td {
+        width: 100%;
+        padding: 1rem 2rem;
+        border: 1px solid #f2f2f2;
+        border-radius: 0.3rem;
+    }
+</style>
+
+<body>
+    <form action="">
+        <h3 style="text-align: center;">Form Validation in JavaScript</h3>
+        <fieldset>
+            <legend>username</legend>
+            <input type="text" name="username" placeholder="Username" autocomplete="username" required />
+            <p class="username-error"></p>
+        </fieldset>
+
+        <fieldset>
+            <legend>age</legend>
+            <input type="number" name="age" min="1" max="100" value="1" required />
+        </fieldset>
+
+        <fieldset>
+            <legend>email</legend>
+            <input type="email" name="email" placeholder="Email" autocomplete="email"
+                pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/" required />
+            <p class="email-error"></p>
+        </fieldset>
+
+        <fieldset>
+            <legend>password</legend>
+            <input type="password" name="password" placeholder="Password" autocomplete="new-password" required />
+            <p class="password-error"></p>
+        </fieldset>
+
+        <fieldset>
+            <legend>phone</legend>
+            <input type="text" name="phone" placeholder="Phone" autocomplete="true" minlength="10" maxlength="10"
+                required />
+            <p class="phone-error"></p>
+        </fieldset>
+
+        <fieldset>
+            <legend>gender</legend>
+            <input type="radio" value="Male" name="gender" checked /> Male
+            <input type="radio" name="gender" value="Female" /> Female
+            <p class="gender-error"></p>
+        </fieldset>
+
+        <input type="submit" value="Submit" />
+    </form>
+
+
+    <div class="user-details hide">
+        <table>
+            <thead>
+                <tr>
+                    <th>Attributes</th>
+                    <th>Values</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Username</td>
+                    <td class="username"></td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td class="age"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td class="email"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td class="password"></td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td class="phone"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td class="gender"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+<script>
+    let form = document.querySelector("form");
+    let userDetails = document.querySelector(".user-details");
+
+    let user = {
+        username: document.querySelector("input[name='username']"),
+        age: document.querySelector("input[name='age']"),
+        email: document.querySelector("input[name='email']"),
+        password: document.querySelector("input[name='password']"),
+        phone: document.querySelector("input[name='phone']"),
+        gender: document.querySelector("input[name='gender']:checked"),
+    };
+
+    let error = {
+        usernameError: document.querySelector(".username-error"),
+        ageError: document.querySelector(".age-error"),
+        emailError: document.querySelector(".email-error"),
+        passwordError: document.querySelector(".password-error"),
+        phoneError: document.querySelector(".phone-error"),
+        genderError: document.querySelector(".gender-error"),
+    };
+
+    let printUser = {
+        username: document.querySelector(".username"),
+        age: document.querySelector(".age"),
+        email: document.querySelector(".email"),
+        password: document.querySelector(".password"),
+        phone: document.querySelector(".phone"),
+        gender: document.querySelector(".gender"),
+    };
+
+
+
+    if (localStorage.getItem("user")) {
+        let localStorageUser = JSON.parse(localStorage.getItem("user"));
+
+        printUser.username.textContent = localStorageUser.username;
+        printUser.age.textContent = localStorageUser.age;
+        printUser.email.textContent = localStorageUser.email;
+        printUser.password.textContent = localStorageUser.password;
+        printUser.phone.textContent = localStorageUser.phone;
+        printUser.gender.textContent = localStorageUser.gender;
+
+        userDetails.classList.remove("hide");
+        form.classList.add("hide");
+    }
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let isValid = false;
+        let { username, age, email, password, phone, gender } = user;
+        let { usernameError, ageError, emailError, passwordError, phoneError, genderError } = error;
+
+        if (username.value.trim() == "") {
+            usernameError.textContent = "Please! Enter the username";
+            isValid = false;
+        }
+        else if (!((username.value.trim()).match("[A-Za-z]+"))) {
+            usernameError.textContent = "Please! Enter the valid username";
+            isValid = false;
+        }
+        else {
+            usernameError.textContent = "";
+            isValid = true;
+        }
+
+        if (email.value.trim() == "") {
+            emailError.textContent = "Please! Enter the email";
+            isValid = false;
+        }
+        else if (!((email.value.trim()).match("/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/"))) {
+            emailError.textContent = "Please! Enter the valid email";
+            isValid = false;
+        }
+        else {
+            emailError.textContent = "";
+            isValid = true;
+        }
+
+
+        if (password.value.trim() == "") {
+            passwordError.textContent = "Please! Enter the password";
+            isValid = false;
+        }
+        else if ((password.value.trim()).length < 8) {
+            passwordError.textContent = "Enter the 8 digits password";
+            isValid = false;
+        }
+        else {
+            passwordError.textContent = "";
+            isValid = true;
+        }
+
+        if (phone.value.trim() == "") {
+            phoneError.textContent = "Please! Enter the phone";
+            isValid = false;
+        }
+        else if ((phone.value.trim()).length < 10 || (phone.value.trim()).length > 10) {
+            phoneError.textContent = "Phone requires 10 digits";
+            isValid = false;
+        }
+        else {
+            phoneError.textContent = "";
+            isValid = true;
+        }
+
+        if (!isValid) return 0;
+
+
+        form.classList.add("hide");
+        userDetails.classList.remove("hide");
+        printUser.username.textContent = username.value;
+        printUser.age.textContent = age.value;
+        printUser.email.textContent = email.value;
+        printUser.password.textContent = password.value;
+        printUser.phone.textContent = phone.value;
+        printUser.gender.textContent = gender.value;
+
+        localStorage.setItem("user", JSON.stringify({
+            username: username.value,
+            age: age.value,
+            email: email.value,
+            password: password.value,
+            phone: phone.value,
+            gender: gender.value
+        }));
+    })
+</script>
+
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+    <div class="grid grid-cols-12">
+        <div class="sidebar lg:block hidden border-r-1 border-gray-200 lg:col-span-3 col-span-0 px-5 py-10">
+            <h1 class="logo text-2xl font-bold">Tailwind CSS</h1>
+
+            <div class="menus">
+                <span class="text-gray-500 block mt-6 mb-3">MENU</span>
+                <button class="text-sm menu block w-full text-start rounded-xl p-3 my-1 hover:bg-[#f2f4f7] bg-[#ecf3ff] text-[#465fff]">
+                    <h3 class="flex justify-between items-center">
+                        <div>
+                            <i class="fa-solid fa-qrcode"></i>&ensp;
+                            <span>Dashboard</span>
+                        </div>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </h3>
+                </button>
+                <button class="menu text-sm block w-full text-start rounded-xl p-3 my-1 hover:bg-[#f2f4f7] focus:bg-[#ecf3ff] focus:text-[#465fff]">
+                    <h3 class="flex justify-between items-center">
+                        <div>
+                            <i class="fa-solid fa-robot"></i>&ensp;
+                            <span>AI Assistant</span>
+                        </div>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </h3>
+                </button>
+                <button class="menu text-sm block w-full text-start rounded-xl p-3 my-1 hover:bg-[#f2f4f7] focus:bg-[#ecf3ff] focus:text-[#465fff]">
+                    <h3 class="flex justify-between items-center">
+                        <div>
+                            <i class="fa-solid fa-cart-shopping"></i>&ensp;
+                            <span>E-Commerce</span>
+                        </div>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </h3>
+                </button>
+                <button class="menu text-sm block w-full text-start rounded-xl p-3 my-1 hover:bg-[#f2f4f7] focus:bg-[#ecf3ff] focus:text-[#465fff]">
+                    <h3 class="flex justify-between items-center">
+                        <div>
+                            <i class="fa-solid fa-calendar-days"></i>&ensp;
+                            <span>Calender</span>
+                        </div>
+                    </h3>
+                </button>
+                <button class="menu text-sm block w-full text-start rounded-xl p-3 my-1 hover:bg-[#f2f4f7] focus:bg-[#ecf3ff] focus:text-[#465fff]">
+                    <h3 class="flex justify-between items-center">
+                        <div>
+                            <i class="fa-solid fa-user-secret"></i>&ensp;
+                            <span>User-Profile</span>
+                        </div>
+                    </h3>
+                </button>
+                <button class="menu text-sm block w-full text-start rounded-xl p-3 my-1 hover:bg-[#f2f4f7] focus:bg-[#ecf3ff] focus:text-[#465fff]">
+                    <h3 class="flex justify-between items-center">
+                        <div>
+                            <i class="fa-solid fa-list-check"></i>&ensp;
+                            <span>Tasks</span>
+                        </div>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </h3>
+                </button>
+                <button class="menu text-sm block w-full text-start rounded-xl p-3 my-1 hover:bg-[#f2f4f7] focus:bg-[#ecf3ff] focus:text-[#465fff]">
+                    <h3 class="flex justify-between items-center">
+                        <div>
+                            <i class="fa-solid fa-file-lines"></i>&ensp;
+                            <span>Forms</span>
+                        </div>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </h3>
+                </button>
+                <button class="menu text-sm block w-full text-start rounded-xl p-3 my-1 hover:bg-[#f2f4f7] focus:bg-[#ecf3ff] focus:text-[#465fff]">
+                    <h3 class="flex justify-between items-center">
+                        <div>
+                            <i class="fa-solid fa-table"></i>&ensp;
+                            <span>Tables</span>
+                        </div>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </h3>
+                </button>
+                <button class="menu text-sm block w-full text-start rounded-xl p-3 my-1 hover:bg-[#f2f4f7] focus:bg-[#ecf3ff] focus:text-[#465fff]">
+                    <h3 class="flex justify-between items-center">
+                        <div>
+                            <i class="fa-solid fa-file"></i>&ensp;
+                            <span>Pages</span>
+                        </div>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </h3>
+                </button>
+                <button class="menu text-sm block w-full text-start rounded-xl p-3 my-1 hover:bg-[#f2f4f7] focus:bg-[#ecf3ff] focus:text-[#465fff]">
+                    <h3 class="flex justify-between items-center">
+                        <div>
+                            <i class="fa-solid fa-table-columns"></i>&ensp;
+                            <span>Layouts</span>
+                        </div>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </h3>
+                </button>
+
+
+                <span class="text-gray-500 block mt-6 mb-3">SUPPORT</span>
+                <button class="menu text-sm block w-full text-start rounded-xl p-3 my-1 hover:bg-[#f2f4f7] focus:bg-[#ecf3ff] focus:text-[#465fff]">
+                    <h3 class="flex justify-between items-center">
+                        <div>
+                            <i class="fa-solid fa-comment"></i>&ensp;
+                            <span>Chat</span>
+                        </div>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </h3>
+                </button>
+                <button class="menu text-sm block w-full text-start rounded-xl p-3 my-1 hover:bg-[#f2f4f7] focus:bg-[#ecf3ff] focus:text-[#465fff]">
+                    <h3 class="flex justify-between items-center">
+                        <div>
+                            <i class="fa-solid fa-headset"></i>&ensp;
+                            <span>Support Ticket</span>
+                        </div>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </h3>
+                </button>
+                <button class="menu text-sm block w-full text-start rounded-xl p-3 my-1 hover:bg-[#f2f4f7] focus:bg-[#ecf3ff] focus:text-[#465fff]">
+                    <h3 class="flex justify-between items-center">
+                        <div>
+                            <i class="fa-solid fa-envelope"></i>&ensp;
+                            <span>Email</span>
+                        </div>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </h3>
+                </button>
+
+
+                <span class="text-gray-500 block mt-6 mb-3">OTHERS</span>
+                <button class="menu text-sm block w-full text-start rounded-xl p-3 my-1 hover:bg-[#f2f4f7] focus:bg-[#ecf3ff] focus:text-[#465fff]">
+                    <h3 class="flex justify-between items-center">
+                        <div>
+                            <i class="fa-solid fa-chart-pie"></i>&ensp;
+                            <span>Charts</span>
+                        </div>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </h3>
+                </button>
+                <button class="menu text-sm block w-full text-start rounded-xl p-3 my-1 hover:bg-[#f2f4f7] focus:bg-[#ecf3ff] focus:text-[#465fff]">
+                    <h3 class="flex justify-between items-center">
+                        <div>
+                            <i class="fa-solid fa-map-location-dot"></i>&ensp;
+                            <span>Map</span>
+                        </div>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </h3>
+                </button>
+                <button class="menu text-sm block w-full text-start rounded-xl p-3 my-1 hover:bg-[#f2f4f7] focus:bg-[#ecf3ff] focus:text-[#465fff]">
+                    <h3 class="flex justify-between items-center">
+                        <div>
+                            <i class="fa-brands fa-react"></i>&ensp;
+                            <span>UI - Elements</span>
+                        </div>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </h3>
+                </button>
+                <button class="menu text-sm block w-full text-start rounded-xl p-3 my-1 hover:bg-[#f2f4f7] focus:bg-[#ecf3ff] focus:text-[#465fff]">
+                    <h3 class="flex justify-between items-center">
+                        <div>
+                            <i class="fa-solid fa-lock"></i>&ensp;
+                            <span>Authentication</span>
+                        </div>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </h3>
+                </button>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Main content -->
+        <div class="main-content lg:col-span-9 col-span-12 bg-gray-50">
+            <header class="flex justify-between items-center py-5 border-b-1 border-gray-200 bg-white">
+                <div class="flex w-full">
+                    <button class="p-2 mx-4 border-1 border-gray-200 rounded-xl text-gray-400"><i
+                            class="fa-solid fa-bars"></i></button>
+                    <div class="flex items-center search-bar border-1 border-gray-200 p-2 w-full rounded-xl">
+                        <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+                        <input class="outline-0 w-full pl-3" type="text" placeholder="Search or type command" />
+                    </div>
+                </div>
+
+                <div class="sm:flex w-full justify-end items-center hidden">
+                    <button class="dark-btn p-2 border-1 border-gray-200 rounded-full text-gray-400"><i
+                            class="fa-solid fa-moon"></i></button>
+                    <button class="dark-btn p-2 mx-2 border-1 border-gray-200 rounded-full text-gray-400"><i
+                            class="fa-solid fa-bell"></i></button>
+
+                    <img class="size-1/10" src="https://demo.tailadmin.com/src/images/user/owner.png" alt="">
+                    &ensp;ABCDEF&ensp;<i class="fa-solid fa-angle-down"></i>
+                </div>
+            </header>
+
+
+            <!-- Container -->
+            <div class="container mx-auto px-4 py-10">
+                <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-3 py-5">
+                    <div class="px-5 py-10 border-1 border-gray-300 rounded-xl bg-white">
+                        <span class="text-xl text-gray-600 p-3 bg-[#f2f4f7] rounded-xl">
+                            <i class="fa-solid fa-users-line"></i>
+                        </span>
+                        <span class="block my-4 text-gray-500">Customers</span>
+                        <div class="flex justify-between items-center">
+                            <span class="text-3xl font-bold">3000</span>
+                            <span class="bg-green-100 h-fit text-xs text-green-700 px-4 py-1 rounded-full"><i
+                                    class="fa-solid fa-arrow-up"></i> 11.01%</span>
+                        </div>
+                    </div>
+
+                    <div class="px-5 py-10 border-1 border-gray-300 rounded-xl bg-white">
+                        <span class="text-xl text-gray-600 p-3 bg-[#f2f4f7] rounded-xl">
+                            <i class="fa-solid fa-cube"></i>
+                        </span>
+                        <span class="block my-4 text-gray-500">Orders</span>
+                        <div class="flex justify-between items-center">
+                            <span class="text-3xl font-bold">100</span>
+                            <span class="bg-red-100 h-fit text-xs text-red-700 px-4 py-1 rounded-full">
+                                <i class="fa-solid fa-arrow-down"></i> 11.01%</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="sm:row-span-2 sm:col-span-2 bg-gray-200 border-1 border-gray-300 rounded-xl overflow-hidden">
+                        <div class="bg-white px-5 py-10 rounded-xl border-0">
+                            <h3 class="font-bold">Monthly Target</h3>
+                            <p class="text-sm text-gray-600">Target you've set for each month</p>
+
+                            <div class="mt-15 px-10 text-center">
+                                <h1 class="text-3xl font-bold text-center mb-2">75.05%</h1>
+                                <span class="bg-green-100 h-fit text-xs text-green-700 px-4 py-1 rounded-full">
+                                    <i class="fa-solid fa-arrow-up"></i> 11.01%
+                                </span>
+                                <p class="text-xs text-gray-500 mt-4">Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit. Aut dolorem nulla architecto
+                                    ipsum libero dolor officiis amet illum veritatis distinctio, iusto delectus facilis
+                                    ad
+                                    cupiditate corporis minima odit at. Modi!</p>
+                            </div>
+                        </div>
+
+                        <div class="columns-3 py-4">
+                            <div class="text-center border-r-1 border-gray-400">
+                                <h3 class="text-sm text-gray-700">Target</h3>
+                                <h1 class="text-lg font-bold">20K <i
+                                        class="fa-solid fa-arrow-down text-sm text-red-700"></i></h1>
+                            </div>
+                            <div class="text-center border-r-1 border-gray-400">
+                                <h3 class="text-sm text-gray-700">Target</h3>
+                                <h1 class="text-lg font-bold">20K <i
+                                        class="fa-solid fa-arrow-up text-sm text-green-700"></i></h1>
+                            </div>
+                            <div class="text-center">
+                                <h3 class="text-sm text-gray-700">Target</h3>
+                                <h1 class="text-lg font-bold">20K <i
+                                        class="fa-solid fa-arrow-down text-sm text-red-700"></i></h1>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-2 px-5 py-10 border-1 border-gray-300 rounded-xl bg-white">
+                        <div class="heading flex justify-between">
+                            <h3 class="text-sm font-bold">Monthly Sales</h3>
+                            <button class="text-gray-400 hover:text-gray-700 cursor-pointer"><i
+                                    class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="grid lg:grid-cols-5 sm:grid-cols-3 grid-cols-1 gap-3 py-5">
+                    <!-- Div - 1 -->
+                    <div class="px-5 py-10 border-1 border-gray-300 rounded-xl bg-white col-span-2">
+                        <div class="heading flex justify-between">
+                            <div>
+                                <h3 class="text-sm font-bold">Customers Demographic</h3>
+                                <p class="text-sm">Number of customer based on country</p>
+                            </div>
+                            <button class="text-gray-400 hover:text-gray-700 cursor-pointer"><i
+                                    class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+
+                        <iframe class="rounded-xl mt-5 w-full"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.4004059210756!2d72.56712907443493!3d23.119035212723215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e825077467e2b%3A0x77b5084b83a44a64!2sMangalmurti%20Heights!5e0!3m2!1sen!2sin!4v1792054455267!5m2!1sen!2sin"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+                        <div class="countries">
+                            <div class="flex justify-between items-center my-5">
+                                <div class="w-full">
+                                    <h3 class="text-sm font-bold">USA</h3>
+                                    <p class="text-sm">2,379 Customers</p>
+                                </div>
+                                <div class="w-full bg-neutral-100 rounded-full h-2">
+                                    <div class="bg-red-500 h-2 rounded-full" style="width: 45%;"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center my-5">
+                                <div class="w-full">
+                                    <h3 class="text-sm font-bold">France</h3>
+                                    <p class="text-sm">589 Customers</p>
+                                </div>
+                                <div class="w-full bg-neutral-100 rounded-full h-2">
+                                    <div class="bg-red-500 h-2 rounded-full" style="width: 65%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Div - 2 -->
+                    <div class="px-5 py-10 border-1 border-gray-300 rounded-xl bg-white col-span-3" style="overflow-x: scroll;">
+                        <div class="heading flex justify-between items-center">
+                            <h3 class="text-sm font-bold">Recent Orders</h3>
+                            <div>
+                                <button class="cursor-pointer text-sm border-1 border-gray-400 px-3 py-2 rounded-xl">
+                                    <i class="fa-solid fa-sliders"></i> Filter
+                                </button>
+                                <button class="cursor-pointer text-sm border-1 border-gray-400 px-3 py-2 rounded-xl">See
+                                    all</button>
+                            </div>
+                        </div>
+
+                        <!-- Products Table -->
+                        <table class="table-auto w-full mt-10">
+                            <thead>
+                                <tr class="border-y-1 border-gray-300 text-left">
+                                    <th class="py-3 text-xs font-bold text-gray-500">Products</th>
+                                    <th class="py-3 text-xs font-bold text-gray-500">Category</th>
+                                    <th class="py-3 text-xs font-bold text-gray-500">Price</th>
+                                    <th class="py-3 text-xs font-bold text-gray-500">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-xs font-bold text-gray-500 flex justify-between items-center">
+                                        <img class="w-1/4 min-w-13"
+                                            src="https://demo.tailadmin.com/src/images/product/product-01.jpg" alt="">
+                                        <div class="w-full pl-2">
+                                            <h3 class="text-xs font-bold">Macbook pro 13"</h3>
+                                            <p class="text-xs">2 Variants</p>
+                                        </div>
+                                    </td>
+                                    <td class="text-sm text-gray-500 font-medium">Laptop</td>
+                                    <td class="text-sm text-gray-500 font-medium">$2399.00</td>
+                                    <td class="text-sm text-gray-500 font-medium"><span
+                                            class="px-3 py-1 bg-green-100 text-green-700 rounded-full">Delivered</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="text-xs font-bold text-gray-500 flex justify-between items-center">
+                                        <img class="w-1/4 min-w-13"
+                                            src="https://demo.tailadmin.com/src/images/product/product-02.jpg" alt="">
+                                        <div class="w-full pl-2">
+                                            <h3 class="text-xs font-bold">Apple Watch Ultra</h3>
+                                            <p class="text-xs">1 Variant</p>
+                                        </div>
+                                    </td>
+                                    <td class="text-sm text-gray-500 font-medium">Watch</td>
+                                    <td class="text-sm text-gray-500 font-medium">$879.00</td>
+                                    <td class="text-sm text-gray-500 font-medium"><span
+                                            class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full">Pending</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="text-xs font-bold text-gray-500 flex justify-between items-center">
+                                        <img class="w-1/4 min-w-13"
+                                            src="https://demo.tailadmin.com/src/images/product/product-03.jpg" alt="">
+                                        <div class="w-full pl-2">
+                                            <h3 class="text-xs font-bold">iPhone 15 Pro Max</h3>
+                                            <p class="text-xs">2 Variants</p>
+                                        </div>
+                                    </td>
+                                    <td class="text-sm text-gray-500 font-medium">SmartPhone</td>
+                                    <td class="text-sm text-gray-500 font-medium">$1869.00</td>
+                                    <td class="text-sm text-gray-500 font-medium"><span
+                                            class="px-3 py-1 bg-green-100 text-green-700 rounded-full">Delivered</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="text-xs font-bold text-gray-500 flex justify-between items-center">
+                                        <img class="w-1/4 min-w-13"
+                                            src="https://demo.tailadmin.com/src/images/product/product-04.jpg" alt="">
+                                        <div class="w-full pl-2">
+                                            <h3 class="text-xs font-bold">iPad Pro 3rd Gen</h3>
+                                            <p class="text-xs">2 Variants</p>
+                                        </div>
+                                    </td>
+                                    <td class="text-sm text-gray-500 font-medium">Electronics</td>
+                                    <td class="text-sm text-gray-500 font-medium">$1699.00</td>
+                                    <td class="text-sm text-gray-500 font-medium"><span
+                                            class="px-3 py-1 bg-red-100 text-red-700 rounded-full">Canceled</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="text-xs font-bold text-gray-500 flex justify-between items-center">
+                                        <img class="w-1/4 min-w-13"
+                                            src="https://demo.tailadmin.com/src/images/product/product-05.jpg" alt="">
+                                        <div class="w-full pl-2">
+                                            <h3 class="text-xs font-bold">Airpods Pro 2nd Gen</h3>
+                                            <p class="text-xs">1 Variant</p>
+                                        </div>
+                                    </td>
+                                    <td class="text-sm text-gray-500 font-medium">Accessories</td>
+                                    <td class="text-sm text-gray-500 font-medium">$240.00</td>
+                                    <td class="text-sm text-gray-500 font-medium"><span
+                                            class="px-3 py-1 bg-green-100 text-green-700 rounded-full">Delivered</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
